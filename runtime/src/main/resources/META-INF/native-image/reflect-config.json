@@ -274,39 +274,39 @@
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueColdProducerFields",
-  "fields":[{"name":"producerLimit"}]
+  "fields":[{"name":"producerLimit", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueConsumerFields",
-  "fields":[{"name":"consumerIndex"}]
+  "fields":[{"name":"consumerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueProducerFields",
-  "fields":[{"name":"producerIndex"}]
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueConsumerIndexField",
-  "fields":[{"name":"consumerIndex"}]
+  "fields":[{"name":"consumerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerIndexField",
-  "fields":[{"name":"producerIndex"}]
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerLimitField",
-  "fields":[{"name":"producerLimit"}]
+  "fields":[{"name":"producerLimit", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.org.jctools.queues.MpscArrayQueueConsumerIndexField",
-  "fields":[{"name":"consumerIndex"}]
+  "fields":[{"name":"consumerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.org.jctools.queues.MpscArrayQueueProducerIndexField",
-  "fields":[{"name":"producerIndex"}]
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.deps.org.jctools.queues.MpscArrayQueueProducerLimitField",
-  "fields":[{"name":"producerLimit"}]
+  "fields":[{"name":"producerLimit", "allowUnsafeAccess": true}]
 },
 {
   "name":"com.couchbase.client.core.endpoint.BaseEndpoint$1"
@@ -634,7 +634,7 @@
 },
 {
   "name":"io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerIndexField",
-  "fields":[{"name":"producerIndex"}]
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess": true}]
 },
 {
   "name":"io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerLimitField",

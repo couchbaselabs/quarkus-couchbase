@@ -9,16 +9,16 @@ import java.util.function.Supplier;
 @Recorder
 public class CouchbaseRecorder {
 
-    public BeanContainerListener setConfig(CouchbaseConfig Config) {
-        System.out.println("CouchbaseRecorder - setConfig");
-        return beanContainer -> {
-            CouchbaseProducer producer = beanContainer.instance(CouchbaseProducer.class);
-            producer.setConfig(Config);
-        };
-    }
+//    public BeanContainerListener setConfig(CouchbaseConfig Config) {
+//        System.out.println("CouchbaseRecorder - setConfig");
+//        return beanContainer -> {
+//            CouchbaseProducer producer = beanContainer.instance(CouchbaseProducer.class);
+//            producer.setConfig(Config);
+//        };
+//    }
 
-    public Supplier<Cluster> getCluster() {
-        System.out.println("CouchbaseRecorder - getCluster");
-        return () -> Cluster.connect("localhost", "Administrator", "password");
+    public Supplier<Cluster> getCluster(CouchbaseConfig config) {
+        System.out.println("CouchbaseRecorder - getCluster " + config.connectionString);
+        return () -> Cluster.connect(config.connectionString, config.username, config.password);
     }
 }
