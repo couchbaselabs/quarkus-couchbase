@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.couchbase</groupId>
-    <artifactId>couchbase-quarkus-extension-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>quarkus-couchbase-parent</artifactId>
+    <version>1.0.0-alpha.1-SNAPSHOT</version>
   </parent>
-  <artifactId>couchbase-quarkus-extension-deployment</artifactId>
+  <artifactId>quarkus-couchbase-deployment</artifactId>
   <name>Couchbase Quarkus Extension - Deployment</name>
   <dependencies>
     <dependency>
@@ -16,7 +16,7 @@
     </dependency>
     <dependency>
       <groupId>com.couchbase</groupId>
-      <artifactId>couchbase-quarkus-extension</artifactId>
+      <artifactId>quarkus-couchbase</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -24,11 +24,6 @@
       <artifactId>quarkus-junit5-internal</artifactId>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>com.couchbase.client</groupId>-->
-<!--      <artifactId>java-client</artifactId>-->
-<!--      <version>3.2.0</version>-->
-<!--    </dependency>-->
   </dependencies>
   <build>
     <plugins>
