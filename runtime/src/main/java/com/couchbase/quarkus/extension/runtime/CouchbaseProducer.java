@@ -14,9 +14,7 @@ public class CouchbaseProducer {
 
     @Produces
     public Cluster produceCluster() throws Exception {
-        System.out.println("CouchbaseProducer - connecting");
-        Cluster cluster = Cluster.connect(config.connectionString, config.username, config.password);
-        return cluster;
+        return Cluster.connect(config.connectionString, config.username, config.password);
     }
 
 }

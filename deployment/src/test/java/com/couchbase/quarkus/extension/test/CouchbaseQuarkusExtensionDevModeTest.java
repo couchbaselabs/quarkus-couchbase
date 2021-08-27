@@ -3,11 +3,13 @@ package com.couchbase.quarkus.extension.test;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkus.test.QuarkusDevModeTest;
 
+@Disabled
 public class CouchbaseQuarkusExtensionDevModeTest {
 
     // Start hot reload (DevMode) test with your extension loaded

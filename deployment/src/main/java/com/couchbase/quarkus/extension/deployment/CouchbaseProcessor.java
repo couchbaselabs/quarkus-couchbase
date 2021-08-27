@@ -19,8 +19,6 @@ public class CouchbaseProcessor {
     public void produceCouchbaseClient(CouchbaseRecorder recorder,
                                        CouchbaseConfig config,
                                        BuildProducer<SyntheticBeanBuildItem> syntheticBeans) {
-        System.out.println("produceCouchbaseClient " + config.connectionString);
-
         syntheticBeans.produce(SyntheticBeanBuildItem
                         .configure(Cluster.class)
                         .scope(ApplicationScoped.class)
