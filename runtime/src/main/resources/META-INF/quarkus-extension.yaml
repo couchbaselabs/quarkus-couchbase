@@ -1,9 +1,10 @@
 name: Couchbase Quarkus Extension
 description: Quarkus and GraalVM support for Couchbase Java SDK
 metadata:
-#  keywords:
-#    - couchbase-quarkus-extension
-#  guide: ...
-#  categories:
-#    - "miscellaneous"
-#  status: "preview"
+  keywords:
+    - "couchbase"
+    - "nosql"
+  guide: ...
+  categories:
+    - "data"
+  status: "preview"
