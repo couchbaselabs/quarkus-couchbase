@@ -4,9 +4,53 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.couchbase</groupId>
   <artifactId>quarkus-couchbase-parent</artifactId>
-  <version>1.0.0-alpha.1-SNAPSHOT</version>
+  <version>1.0.0-alpha.1</version>
   <packaging>pom</packaging>
   <name>Couchbase Quarkus Extension - Parent</name>
+  <description>Allows access to a Couchbase cluster from a Quarkus application</description>
+  <url>https://github.com/couchbaselabs/quarkus-couchbase</url>
+  <organization>
+    <name>com.couchbase</name>
+    <url>https://www.couchbase.com</url>
+  </organization>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/couchbaselabs/quarkus-couchbase/issues</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>https://github.com/couchbaselabs/quarkus-couchbase/blob/main/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>programmatix</id>
+      <name>Graham Pople</name>
+      <email>graham.pople@couchbase.com</email>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/couchbaselabs/quarkus-couchbase</connection>
+    <developerConnection>scm:git:https://github.com/couchbaselabs/quarkus-couchbase</developerConnection>
+    <url>https://github.com/couchbaselabs/quarkus-couchbase</url>
+  </scm>
   <modules>
     <module>deployment</module>
     <module>runtime</module>
@@ -67,6 +111,44 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${compiler-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.0.1</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
